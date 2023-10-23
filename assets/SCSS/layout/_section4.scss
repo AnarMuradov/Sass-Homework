@@ -1,0 +1,99 @@
+@mixin theme($theme: flex) {
+  display: $theme;
+  align-items: center;
+  justify-content: center;
+}
+#candidats {
+  max-width: 100%;
+  min-height: 446px;
+  background-color: #f5f7fa;
+  position: relative;
+  .section-container {
+    max-width: 100%;
+    min-height: 346px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .section-name {
+      font-size: 38px;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 30px;
+
+      .card {
+        width: 255px;
+        height: 262px;
+        background-color: white;
+        flex-direction: column;
+        @include theme;
+        .name {
+          margin-top: 24px;
+          font-size: 20px;
+          cursor: pointer;
+          transition: 300ms;
+        }
+        .name:hover {
+          color: #00d363;
+        }
+        .prof {
+          font-size: 16px;
+          color: #aab1b7;
+          margin-top: 10px;
+        }
+      }
+    }
+    @media screen and (max-width: 1124px) {
+      .card-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .card-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+      }
+    }
+
+    .fa-chevron-left {
+      position: absolute;
+      left: 190px;
+      bottom: 220px;
+      color: #0a8cff;
+      background: rgba(10, 140, 255, 0.1);
+      height: 40px;
+      text-align: center;
+      width: 40px;
+      border-radius: 50%;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    .fa-chevron-right {
+      position: absolute;
+      right: 190px;
+      bottom: 220px;
+      color: #0a8cff;
+      background: rgba(10, 140, 255, 0.1);
+      height: 40px;
+      text-align: center;
+      width: 40px;
+      border-radius: 50%;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    .fa-chevron-left:hover {
+      background: rgba(10, 140, 255, 0.5);
+      color: white;
+    }
+    .fa-chevron-right:hover {
+      background: rgba(10, 140, 255, 0.5);
+      color: white;
+    }
+  }
+}

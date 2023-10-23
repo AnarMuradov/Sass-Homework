@@ -1,0 +1,131 @@
+$clr: #00d363;
+@mixin theme($theme: flex) {
+  display: $theme;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  background-image: url(https://preview.colorlib.com/theme/jobboard2/img/banner/banner.png.webp);
+  min-height: 550px;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .navbar {
+    min-height: 94px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .nav-logo {
+      cursor: pointer;
+    }
+
+    .nav-items {
+      ul {
+        display: flex;
+        gap: 25px;
+        li {
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+          transition: 300ms;
+          i {
+            font-size: 13px;
+          }
+        }
+        li:hover {
+          color: $clr;
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      .nav-items {
+        display: none;
+      }
+    }
+    .nav-btn {
+      display: flex;
+      gap: 25px;
+      color: white;
+      align-items: center;
+      cursor: pointer;
+      a {
+        width: 138px;
+        height: 51px;
+        background-color: $clr;
+        text-align: center;
+        line-height: 51px;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      a:hover {
+        background-color: #007bff;
+
+        color: $clr;
+        border: 1px solid $clr;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      .nav-btn {
+        display: none;
+      }
+    }
+  }
+  .container {
+    min-height: 456px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    .block1 {
+      min-height: 456px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0px 0px 0px 100px;
+      padding-bottom: 120px;
+      gap: 25px;
+      h3 {
+        font-size: 30px;
+        font-weight: 100;
+        color: white;
+      }
+      h2 {
+        color: white;
+        font-size: 40px;
+      }
+      p {
+        color: white;
+        font-size: 14px;
+      }
+      a {
+        max-width: 210px;
+        min-height: 51px;
+        background-color: $clr;
+        text-align: center;
+        line-height: 51px;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      a:hover {
+        background-color: #007bff;
+
+        color: $clr;
+        border: 1px solid $clr;
+      }
+    }
+    .block2 {
+      display: grid;
+      align-items: end;
+      img {
+        width: 590px;
+        height: 383px;
+      }
+    }
+  }
+}

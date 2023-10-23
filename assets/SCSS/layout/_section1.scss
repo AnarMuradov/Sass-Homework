@@ -1,0 +1,100 @@
+@mixin theme($theme: flex) {
+  display: $theme;
+  align-items: center;
+  justify-content: center;
+}
+#findjob {
+  max-width: 100%;
+  min-height: 320px;
+  @include theme;
+  .container {
+    max-width: 100%;
+    @include theme;
+    min-height: 120px;
+    flex-direction: column;
+    gap: 30px;
+    form {
+      @include theme;
+      max-width: 100%;
+      gap: 20px;
+      input {
+        height: 50px;
+        width: 250px;
+        border: 1px solid #e8e8e8;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      select {
+        height: 50px;
+        width: 250px;
+        border: 1px solid #e8e8e8;
+        padding: 0px 20px;
+        border-radius: 10px;
+        font-size: 16px;
+        option {
+          height: 42px;
+          width: 250px;
+          font-size: 16px;
+          color: #7a838b;
+        }
+      }
+      a {
+        width: 250px;
+        height: 51px;
+        background-color: #00d363;
+        text-align: center;
+        line-height: 51px;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      a:hover {
+        background-color: white;
+
+        color: #00d363;
+        border: 1px solid #00d363;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      form {
+        display: grid;
+        grid-template-columns: auto;
+        max-width: 100%;
+        gap: 20px;
+      }
+    }
+    .tag {
+      display: flex;
+      gap: 20px;
+      h3 {
+        font-weight: 100;
+      }
+      a {
+        color: #0a8cff;
+        font-size: 14px;
+        border: 1px solid #cee8ff;
+        border-radius: 5px;
+        padding: 7px 14px;
+      }
+    }
+    @media screen and (max-width: 1020px) {
+      .tag {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      .tag {
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+    }
+    @media screen and (max-width: 450px) {
+      .tag {
+        display: grid;
+        grid-template-columns: auto auto;
+      }
+    }
+  }
+}

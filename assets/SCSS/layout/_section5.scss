@@ -1,0 +1,108 @@
+@mixin theme($theme: inline-flex) {
+  display: $theme;
+  align-items: center;
+  justify-content: center;
+}
+
+#company {
+  max-width: 100%;
+  min-height: 410px;
+  background-color: #f5f7fa;
+  .section-container {
+    max-width: 100%;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .section-name {
+      display: flex;
+      width: 75%;
+
+      .name {
+        width: 50%;
+        font-size: 38px;
+      }
+      .bmj-btn {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+          width: 180px;
+          height: 51px;
+          color: #00d363;
+          border-radius: 5px;
+          font-weight: bold;
+          font-size: 15px;
+          border: 1px solid #00d363;
+          @include theme;
+        }
+        a:hover {
+          background-color: #00d363;
+          color: white;
+          border: 1px solid #00d363;
+        }
+      }
+    }
+    .card-container {
+      display: flex;
+      gap: 30px;
+
+      .card {
+        width: 255px;
+        height: 222px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        .card-img {
+          width: 82px;
+          height: 82px;
+          border-radius: 5px;
+          padding: 15px;
+          background: #f5f7fa;
+          border: 1px solid #f0f0f0;
+        }
+        .name {
+          margin-top: 24px;
+          font-size: 20px;
+          cursor: pointer;
+          transition: 300ms;
+        }
+        .name:hover {
+          color: #00d363;
+        }
+        .info {
+          font-size: 16px;
+          color: #aab1b7;
+          width: 100%;
+          margin-top: 10px;
+          span {
+            @include theme;
+            width: 52px;
+            height: 31px;
+            background-color: #e6f3ff;
+            color: #0a8cff;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1124px) {
+      .card-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .card-container {
+        display: grid;
+        grid-template-columns: auto;
+        gap: 5px;
+      }
+    }
+  }
+}

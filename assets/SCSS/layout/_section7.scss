@@ -1,0 +1,125 @@
+#testimonial {
+  max-width: 100%;
+  min-height: 512px;
+  padding: 100px 0px;
+  display: grid;
+  justify-items: center;
+  .name {
+    font-size: 38px;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    .img {
+      position: relative;
+      i {
+        position: absolute;
+        bottom: 20px;
+        right: 0px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #00d363;
+        color: white;
+        text-align: center;
+        line-height: 60px;
+      }
+      @media screen and (max-width: 800px) {
+        i {
+          bottom: 20px;
+          right: 0px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: #00d363;
+          color: white;
+          text-align: center;
+          line-height: 30px;
+          font-size: 15px;
+        }
+      }
+    }
+
+    .info {
+      max-width: 706px;
+      min-height: 140px;
+      display: grid;
+      align-content: space-around;
+      gap: 20px;
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 1000px) {
+        p {
+          font-size: 15px;
+          line-height: 15px;
+          max-width: 550px;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        p {
+          font-size: 12px;
+          line-height: 15px;
+          max-width: 550px;
+        }
+      }
+      @media screen and (max-width: 400px) {
+        p {
+          font-size: 8px;
+          line-height: 10px;
+          max-width: 550px;
+        }
+      }
+
+      span {
+        color: #7a838b;
+      }
+      @media screen and (max-width: 1000px) {
+        span {
+          font-size: 10px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        span {
+          font-size: 8px;
+        }
+      }
+    }
+    .icon {
+      display: grid;
+      gap: 10px;
+      i {
+        color: #0a8cff;
+        background: rgba(10, 140, 255, 0.1);
+        height: 50px;
+        text-align: center;
+        width: 50px;
+        border-radius: 50%;
+        line-height: 50px;
+        cursor: pointer;
+      }
+
+      i:hover {
+        background: rgba(10, 140, 255, 0.5);
+        color: white;
+      }
+      @media screen and (max-width: 1000px) {
+        i {
+          height: 30px;
+          width: 30px;
+          line-height: 30px;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        i {
+          height: 20px;
+          width: 20px;
+          line-height: 20px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

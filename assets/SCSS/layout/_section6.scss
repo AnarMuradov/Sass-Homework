@@ -1,0 +1,86 @@
+#job-expert {
+  max-width: 100%;
+  min-height: 400px;
+  display: flex;
+  .job {
+    width: 50%;
+    background-image: url(https://preview.colorlib.com/theme/jobboard2/img/job/1.png.webp);
+    position: relative;
+    .job-bgc {
+      width: 100%;
+      background-color: #0a8cff;
+      position: absolute;
+      min-height: 400px;
+      opacity: 0.8;
+      display: grid;
+      align-items: center;
+      align-content: center;
+      padding-right: 50px;
+      justify-content: end;
+      gap: 20px;
+      .head {
+        font-size: 38px;
+        color: white;
+      }
+      .info {
+        font-size: 16px;
+        color: white;
+      }
+
+      a {
+        width: 122px;
+        height: 40px;
+        background-color: #00d363;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 15px;
+        transition: 300ms;
+      }
+      a:hover {
+        background-color: #0a8cff;
+        color: #00d363;
+        border: 1px solid #00d363;
+      }
+    }
+  }
+  .expert {
+    width: 50%;
+    background-color: #2b9bff;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    gap: 20px;
+    padding-right: 40px;
+
+    .head {
+      font-size: 38px;
+      color: white;
+    }
+    .info {
+      font-size: 16px;
+      color: white;
+    }
+
+    a {
+      width: 122px;
+      height: 40px;
+      background-color: #00d363;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      transition: 300ms;
+    }
+    a:hover {
+      background-color: #2b9bff;
+      color: #00d363;
+      border: 1px solid #00d363;
+    }
+  }
+}
